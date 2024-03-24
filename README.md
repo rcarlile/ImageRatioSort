@@ -29,3 +29,4 @@ Popular ratios and what I call them.
 | Date | Author | Description |
 | --- | --- | --- |
 | 2024-03-23 | RC | Initial Creation |
+| 2024-03-24 | RC | Added image extension check |
