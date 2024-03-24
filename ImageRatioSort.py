@@ -24,6 +24,7 @@
 
 # History:
 # 2024-03-23    RC  Initial Creation
+# 2024-03-24    RC  Added image extension check
 
 from PIL import Image
 import os
@@ -31,6 +32,7 @@ import shutil
 
 # This is the directory for the unsorted images
 unsorted_directory = 'Unsort'
+image_ext = ('.jpg','.png','.bmp','.jpeg', '.gif')
 
 #Lets loop through the unsorted folder
 for filename in os.listdir(unsorted_directory):
@@ -42,7 +44,7 @@ for filename in os.listdir(unsorted_directory):
     if os.path.isfile(full_file_path):
 
         # Lets not process .DS_Store on mac
-        if(os.path.join(unsorted_directory,'.DS_Store') != full_file_path):
+        if filename.lower().endswith(image_ext):
 
             #Lets get some variables going.
             file_image = Image.open(full_file_path)
